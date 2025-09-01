@@ -1,5 +1,5 @@
 import React from 'react'
-
+import heart from '/icons/heart.png'
 const Footer = () => {
     return (
         <>
@@ -10,7 +10,7 @@ const Footer = () => {
                     <span className="text-green-600">OP/&gt;</span>
                 </div>
                 <div className='flex justify-center items-center'>
-                    Created with <img className='w-10 ' src="/icons/heart.png" alt="" /> by Hassan
+                    Created with <img className='w-10 ' src={heart} alt="" /> by Hassan
                 </div>
             </div>
         </>

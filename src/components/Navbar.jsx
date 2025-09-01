@@ -1,4 +1,5 @@
 import React from 'react'
+import githubLogo from '/icons/github.png'
 
 const Navbar = () => {
   return (
@@ -20,7 +21,7 @@ const Navbar = () => {
         <button className='text-white bg-green-700 rounded-lg flex gap-2 items-center' onClick={() => window.open("https://github.com/MuhammadHassan1509/password-manager", "_blank")}
         >
 
-          <img className='invert w-8' src="/icons/github.png" alt="github logo" /><span className='text-center pr-2'>GitHub</span>
+          <img className='invert w-8' src={githubLogo} alt="github logo" /><span className='text-center pr-2'>GitHub</span>
         </button>
       </div>
     </nav>

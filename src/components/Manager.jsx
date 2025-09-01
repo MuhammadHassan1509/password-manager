@@ -3,6 +3,8 @@ import { useRef, useState } from 'react';
 import YourPasswords from './YourPasswords';
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
+import eye from '/icons/eye.png'
+import eyecross from '/icons/eyecross.png' 
 
 const Manager = () => {
     const passwordRef = useRef()
@@ -21,11 +23,11 @@ const Manager = () => {
     const showPassword = () => {
         if (ref.current.src.includes("icons/eye.png")) {
             passwordRef.current.type = "text"
-            ref.current.src = "icons/eyecross.png"
+            ref.current.src = eyecross
         }
         else {
             passwordRef.current.type = "password"
-            ref.current.src = "icons/eye.png"
+            ref.current.src = eye
         }
     }
 
@@ -113,7 +115,7 @@ const Manager = () => {
                         <div className="relative flex items-center">
                             <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Password' className='rounded-full border border-green-500 w-full pr-6 pl-1 py-1 text-start' type="password" name='password' id='password' />
                             <span className='absolute right-0 cursor-pointer' onClick={showPassword}>
-                                <img ref={ref} className='p-1' width={55} src="/icons/eye.png" alt="eye" />
+                                <img ref={ref} className='p-1' width={55} src={eyecross} alt="eye" />
                             </span>
                         </div>
 
